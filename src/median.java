@@ -8,7 +8,7 @@
  * @author RAHUL
  */
 
-class A
+class Mid
 {
     int median(int arr[], int n)
     {
@@ -40,9 +40,18 @@ class A
         else if(m1 < m2)
         {
             if (n % 2 == 0)
-                return getMedian(ar1 + n/2 - 1, ar2, n - n/2 +1);
+                return getMedian((ar1 + n/2 - 1), ar2, n - n/2 +1);
             else
-                return getMedian(ar1 + n/2, ar2, n - n/2);
+                return getMedian((ar1 + n/2), ar2, n - n/2);
+        }
+
+        else if(m1>m2)
+        {
+            if (n % 2 == 0)
+                return getMedian((ar2 + n/2 - 1), ar1, n - n/2 +1);
+            else
+                return getMedian((ar2 + n/2), ar1, n - n/2);
+
         }
 
     }
@@ -55,7 +64,7 @@ public class median {
         int[] ar1 = {1, 12, 15, 26, 38};
         int[] ar2 = {2, 13, 17, 30, 45};
         int n1=ar1.length,n2=ar2.length;
-        A ob = new A();
+        Mid ob = new Mid();
         if (n1 == n2)
             System.out.print("Median is %d" +ob.getMedian(ar1, ar2, n2));
         else
