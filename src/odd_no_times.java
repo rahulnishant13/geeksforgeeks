@@ -11,6 +11,7 @@ public class odd_no_times {
     public static void main(String a[]){
         Scanner num = new Scanner(System.in);
         int x,i,rslt=0;
+        System.out.print("Enter no of data x :");
         x = num.nextInt();
         int[] arr = new int[x];
 

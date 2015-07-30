@@ -19,6 +19,3 @@ public class autobox
             System.out.println("Not Same");
     }
 }
-
-
-}
