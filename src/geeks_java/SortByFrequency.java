@@ -36,7 +36,6 @@ class NameComparator implements Comparator
 
         return s1.name.compareTo(s2.name);
     }
-
 }
 
 
@@ -60,6 +59,5 @@ class SortByFrequency
         }
 
         System.out.println("sorting by age...");
-
  }
 }

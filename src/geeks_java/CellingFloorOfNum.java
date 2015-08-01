@@ -12,7 +12,7 @@ package geeks_java;
 
 class CelngFlr
 {
-    public int [] arr;
+    int [] arr;
 
     int callCelling(int x)
     {
@@ -55,14 +55,15 @@ public class CellingFloorOfNum
     public static void main(String [] args)
     {
         CelngFlr obj = new CelngFlr();
-        int [] arr = new int[]{2,5,7,9};
+       // int [] arr = new int[]{2,5,7,9};
         obj.arr = new int[]{2,5,7,9};
+        System.out.print(obj.arr.length);
         int index;
         index = obj.callCelling(7);
 
         if(index == -1)
             System.out.println("Celling not found");
         else
-            System.out.println("celling found : " +arr[index]);
+            System.out.println("celling found : " +obj.arr[index]);
     }
 }
