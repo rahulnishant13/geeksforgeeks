@@ -3,13 +3,13 @@
  * and open the template in the editor.
  */
 
-package PonderDaily;
+package geeks_java_Array;
 import java.util.*;
 /**
  *
  * @author RAHUL
  */
-class DeqeueArray
+class Arra
 {
     Integer [] arr;
 
@@ -48,7 +48,7 @@ public class MasxInSubArray {
 
     public static void main(String [] Arrr)
     {
-        DeqeueArray obj = new DeqeueArray();
+        Arra obj = new Arra();
         obj.arr = new Integer []{22,1,9,5,2,3,7,8};
 
         obj.maxInWindow(3);

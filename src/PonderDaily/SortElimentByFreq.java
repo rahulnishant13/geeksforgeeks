@@ -5,7 +5,7 @@
 
 package PonderDaily;
 import java.util.*;
-import java.lang.*;
+//import java.lang.*;
 /**
  *
  * @author RAHUL
@@ -41,6 +41,7 @@ class Node implements Comparator<Node>
     {
         if( (x < list.size()) && (list.get(x).data != list.get(x+1).data) )
         {
+            System.out.println(x +" rXn  " + list.size());
             return x;
         }
         int y;
@@ -86,7 +87,7 @@ public class SortElimentByFreq {
           Collections.sort(list, new Node());
 
           for(Node a: list)
-             System.out.print("  "+a.getData());
+            // System.out.print("  "+a.getData());
 
           for(int i=0; i < list.size(); i++)
           {
@@ -96,10 +97,10 @@ public class SortElimentByFreq {
 
           System.out.println();
           
-          Collections.sort(list, new Frequency());
+       /*   Collections.sort(list, new Frequency());
 
           for(Node a: list)
              System.out.print("  "+a.getData() +" " +a.count + ",");
-          
+*/
     }
 }
