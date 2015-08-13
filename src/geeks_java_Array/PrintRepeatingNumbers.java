@@ -24,7 +24,6 @@ class PrintNum
                 System.out.print(" "+Math.abs(arr[i]));
         }
     }
-
 }
 
 public class PrintRepeatingNumbers
@@ -32,7 +31,7 @@ public class PrintRepeatingNumbers
     public static void main(String [] args)
     {
         PrintNum obj = new PrintNum();
-        obj.arr = new int[]{2,4,1,5,2,6,1,4};
+        obj.arr = new int[]{2,4,1,5,2,6,3,4};
         obj.repeatedNumbers();
     }
 }

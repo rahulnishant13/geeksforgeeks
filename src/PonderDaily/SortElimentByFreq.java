@@ -28,7 +28,7 @@ class Node implements Comparator<Node>
     public int getData(){
       return data;
    }
-    
+
     public int getCount(){
       return count;
    }
@@ -37,37 +37,32 @@ class Node implements Comparator<Node>
       return d.data - d1.data;
    }
 
-    int fun(List<Node> list, int x , int [] count_frequency )
+    void fun( List<Node> list )
     {
-        if( (x < list.size()) && (list.get(x).data != list.get(x+1).data) )
+        for(int i=0; i < list.size() ; )
         {
-            System.out.println(x +" rXn  " + list.size());
-            return x;
-        }
-        int y;
-        if(count_frequency[0]==-1)
-        {
-            count_frequency[0] = 1;
-            y=0;
-          
-        }else
-        {
-        y=x+1;
-        count_frequency[0] = count_frequency[0] + 1;
-        }
-            int z;
-            z = fun(list, y,count_frequency);
-            list.get(y).count = count_frequency[0];
+            int x=1,j=i;
+            while( (j < list.size()-1) && (list.get(j).data == list.get(j+1).data))
+            {
+                x++;
+                j++;
+            }
             
-            return z;
+            while( i <= j )
+            {
+                list.get(i).count =x;
+                i++;
+            }
+        }
     }
+
 }
 
 class Frequency implements Comparator<Node>
 {
     public int compare(Node d, Node d1)
     {
-        return d.count - d1.count;
+        return d1.count - d.count;
     }
 }
 
@@ -75,9 +70,8 @@ public class SortElimentByFreq {
     public static void main(String [] args)
     {
           Node obj = new Node();
-          int[] count_frequency = new int[]{-1} ;
           List<Node> list = new ArrayList<Node>();
-  
+
           list.add(new Node(0,2));
           list.add(new Node(1,3));
           list.add(new Node(2,2));
@@ -89,18 +83,14 @@ public class SortElimentByFreq {
           for(Node a: list)
             // System.out.print("  "+a.getData());
 
-          for(int i=0; i < list.size(); i++)
-          {
-                i = obj.fun(list, i, count_frequency);
-
-          }
+          obj.fun(list);
 
           System.out.println();
-          
-       /*   Collections.sort(list, new Frequency());
+
+          Collections.sort(list, new Frequency());
 
           for(Node a: list)
-             System.out.print("  "+a.getData() +" " +a.count + ",");
-*/
+             System.out.print(a.getData() + " , ");
+
     }
 }

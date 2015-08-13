@@ -9,26 +9,20 @@ package geeks_java_Array;
  *
  * @author RAHUL
  */
-class test
-{
-    int fibo(int i)
-    {
-        if (i == 0) System.out.print(" "+ i);
-        if (i<= 2) System.out.print(" 1");
-
-        int z = fibo(i - 1) + fibo(i - 2);
-        System.out.print(" "+z);
-
-        return 0;
-    }
-
-}
-
-public class fibonacci
-{
-    public static void main(String[] args)
-{
-    int n = 0;
-
-}
+class Fibonacci{
+ static int n1=0,n2=1,n3=0;
+ static void printFibonacci(int count){
+    if(count>0){
+         n3 = n1 + n2;
+         n1 = n2;
+         n2 = n3;
+         System.out.print(" "+n3);
+         printFibonacci(count-1);
+     }
+ }
+ public static void main(String args[]){
+  int count=10;
+  System.out.print(n1+" "+n2);
+  printFibonacci(count-2);
+ }
 }
