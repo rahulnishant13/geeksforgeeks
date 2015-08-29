@@ -16,23 +16,23 @@ import java.util.Stack;
 
 class SpiralTraversal
 {
-    Queue<Node> q = new LinkedList();
     Stack<Node> s = new Stack<Node>();
+    Stack<Node> s1 = new Stack<Node>();
 
     void printSpiral(Node r)
     {
-        q.add(r);
+        s1.push(r);
         Node temp = r;
-        while(!q.isEmpty() || !s.empty())
+        while(!s1.empty() || !s.empty())
         {
-            while(!q.isEmpty())
+            while(!s1.empty())
             {
-                temp = q.poll();
+                temp = s1.pop();
                 System.out.print( temp.data+" ");
-                if(temp.left != null)
+                if(temp.right != null)
                 s.push(temp.right);
 
-                if(temp.right != null)
+                if(temp.left != null)
                 s.push(temp.left);
             }
             
@@ -41,12 +41,11 @@ class SpiralTraversal
                 temp = s.pop();
                 System.out.print( temp.data+" ");
                 if(temp.left != null)
-                    q.add(temp.right);
+                    s1.push(temp.left);
 
                 if(temp.right != null)
-                    q.add(temp.left);
+                    s1.push(temp.right);
             }
-
         }
     }
 }

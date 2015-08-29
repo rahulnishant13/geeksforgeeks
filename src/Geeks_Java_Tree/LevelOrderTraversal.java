@@ -13,7 +13,7 @@ import java.util.Queue;
  * @author RAHUL
  */
 
-public class LevelOrderPrint {
+public class LevelOrderTraversal {
     public static void main(String [] args)
     {
         Node root = new Node(50);
@@ -37,6 +37,4 @@ public class LevelOrderPrint {
             q.add(temp.right);
         }
     }
-
-
 }

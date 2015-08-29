@@ -10,17 +10,22 @@ package Geeks_Java_Tree;
  * @author RAHUL
  */
 
-class Depth
+class LOTREc
 {
-    
-    int depth(Node r)
+    void callPath(Node r)
+    {
+        for(int i=0; i<= height(r);i++)
+            printLevelOrder(r, i);
+    }
+
+    private int height(Node r) 
     {
         int l=0,ryt=0;
         if(r == null)
             return 1;
-        
-        l = depth(r.left);
-        ryt = depth(r.right);
+
+        l = height(r.left);
+        ryt = height(r.right);
 
         if (l > ryt) {
             return  (l+1);
@@ -28,9 +33,21 @@ class Depth
         else
             return (ryt+1);
     }
+
+    private void printLevelOrder(Node r, int i) 
+    {
+        if(r == null)
+            return;
+        if(i == 1)
+            System.out.print(r.data +" ");
+        else if(i == 0)
+            return;
+        printLevelOrder(r.left, i-1);
+        printLevelOrder(r.right, i-1);
+    }
 }
 
-public class DepthOrHeight {
+public class LevelOrderTraversalRecursion {
     public static void main(String [] args)
     {
         Node root = new Node(50);
@@ -41,7 +58,6 @@ public class DepthOrHeight {
         root.right.left = new Node(60);
         root.right.right = new Node(90);
 
-        System.out.print(new Depth().depth(root));
+        new LOTREc().callPath(root);
     }
-
 }
