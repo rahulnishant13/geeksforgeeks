@@ -1,16 +1,19 @@
 #include <stdio.h>
+#include <conio.h>
 
 int quicksort(int a[], int low, int h){
 	int pivot,i,j,temp;
 	i = low;
 	pivot = a[low];
-	for(j=low+1;j <= h;j++){
-		if(a[j] < pivot){
+	for(j=low+1;j <= h;j++)
+    {
+		if(a[i] > pivot)
 			i++;
-			temp = a[j];
-			a[j] = a[i];
-			a[i] = temp;
-			}
+		else{
+             temp = a[j];
+			 a[j] = a[i];
+			 a[i] = temp;
+            }
 		}
 	temp = a[i];
 	a[i] = pivot;
@@ -29,7 +32,7 @@ void partition(int a[], int low, int h){
 
 int main(int argc, char **argv)
 {
-	int a[]={5,7,24,3,9,2},i;
+	int a[]={7,6,5,4,3,2,1},i;
 	
 	partition(a,0,5);
 	
@@ -37,5 +40,6 @@ int main(int argc, char **argv)
 	for(i=0;i<6;i++){
 		printf("%d\t",a[i]);
 		}
+		getch();
 	return 0;
 }

@@ -39,13 +39,13 @@ void pos(block *temp){
      if(temp != NULL){
      pos(temp->l);
      pos(temp->r);
-     printf("%d \n",temp->data);
+     printf("%d ",temp->data);
      }
      }
 
 void pre(block *temp){
      if(temp != NULL){
-     printf("%d \n",temp->data);
+     printf("%d ",temp->data);
      pre(temp->l);
      pre(temp->r);
      }
@@ -54,7 +54,7 @@ void pre(block *temp){
 void inor(block *temp){
      if(temp != NULL){
      inor(temp->l);
-     printf("%d \n",temp->data);
+     printf("%d ",temp->data);
      inor(temp->r);
      }
      }

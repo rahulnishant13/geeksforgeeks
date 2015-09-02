@@ -14,9 +14,7 @@ int main()
       temp = a[i];
       a[i] = a[j];
       a[j] = temp;
-     }
-   else
-   {}
+      }
    }
   i++;
   }

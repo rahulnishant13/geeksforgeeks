@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <conio.h>
 
 int main(int argc, char **argv)
 {
@@ -25,5 +26,6 @@ int main(int argc, char **argv)
 		printf("%d\t",a[i]);
 		}
 	printf("\n");
+	getch();
 	return 0;
 }

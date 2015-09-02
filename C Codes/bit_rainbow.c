@@ -23,6 +23,7 @@
 
 
 #include <stdio.h>
+#include <conio.h>
 
 int main(int argc, char **argv)
 {
@@ -53,5 +54,6 @@ int main(int argc, char **argv)
 	if(arr[6] == 1)
 	 printf("Red");
 
+    getch();
 	return 0;
 }

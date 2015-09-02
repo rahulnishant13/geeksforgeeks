@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <conio.h>
 
 void merge(int a[], int low, int mid, int high){
 	int m = mid+1,i,l,temp[high+1];
@@ -55,5 +56,6 @@ int main(int argc, char **argv)
 	for(i=0;i<7;i++){
 		printf("%d\t",a[i]);
 		}
+    getch();
 	return 0;
 }

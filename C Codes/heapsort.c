@@ -1,10 +1,10 @@
 #include <stdio.h>
-
+#include <conio.h>
 
 void heapsort( int arr[], int n )
 {  
 	int i, val, lr, t ;
-	while(n>0){
+	while(n > 0){
     for ( i = 1 ; i <= n-1 ; i++ )
     {
         val = arr[i] ;
@@ -54,24 +54,23 @@ int main(int argc, char **argv)
 		scanf("%d",&arr[i]);
 		}
 
-	printf("Array : ");
+	printf("\nArray : ");
 	for(i=0;i<n;i++){
-		printf("%d\t",arr[i]);
+		printf("%d ",arr[i]);
 		}
 	
 	
-	printf("\n HEAP :");
+	printf("\n HEAP : ");
 	heap(arr,n);
 	for(i=0;i<n;i++){
-	    printf("%d\t",arr[i]);
+	    printf("%d ",arr[i]);
 	    }
 	 
-	 
-	 printf("\n heapsort : ");
-	heapsort(arr,n);
-	for(i=0;i<n;i++){
-	    printf("%d\t",arr[i]);
+   printf("\n heapsort : ");
+   heapsort(arr,n);
+   for(i=0;i<n;i++){
+      printf("%d ",arr[i]);
 	    }
-	 
+	 getch();
 	return 0;
 }
