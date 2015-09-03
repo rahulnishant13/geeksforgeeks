@@ -14,7 +14,7 @@ class LOTREc
 {
     void callPath(Node r)
     {
-        for(int i=0; i<= height(r);i++)
+        for(int i=1; i <= height(r);i++)
             printLevelOrder(r, i);
     }
 
@@ -22,7 +22,7 @@ class LOTREc
     {
         int l=0,ryt=0;
         if(r == null)
-            return 1;
+            return 0;
 
         l = height(r.left);
         ryt = height(r.right);

@@ -31,7 +31,7 @@ class Path
     }
 }
 
-public class PrintPath {
+public class RootToLeafPath {
     public static void main(String [] args)
     {
         Node root = new Node(50);

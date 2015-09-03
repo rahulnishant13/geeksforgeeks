@@ -27,10 +27,10 @@ class SumNotAdjacent
         {
             int temp = inc;
             inc = arr[i] + exc;
-            exc = this.max(temp, exc);
+            exc = max(temp, exc);
         }
 
-        System.out.println("   "+this.max(exc, inc) );
+        System.out.println("Max Sum   "+max(exc, inc) );
     }
 
 }

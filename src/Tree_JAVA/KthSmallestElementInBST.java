@@ -5,31 +5,32 @@
 
 package Tree_JAVA;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 /**
  *
  * @author RAHUL
  */
 
-class Depth
-{    
-    int depth(Node r)
-    {
-        int l=0,ryt=0;
-        if(r == null)
-            return 0;
-        
-        l = depth(r.left);
-        ryt = depth(r.right);
+class KthInBSt
+{
+    int [] arr = new int[10];
+    int i =0;
 
-        if (l > ryt) {
-            return  (l+1);
-        }
-        else
-            return (ryt+1);
+    void createArray(Node r)
+    {
+        if(r == null)
+            return;
+        createArray(r.left);
+        arr[i++] = r.data;
+        createArray(r.right);
     }
+
 }
 
-public class DepthOrHeight {
+public class KthSmallestElementInBST
+{
     public static void main(String [] args)
     {
         Node root = new Node(50);
@@ -40,7 +41,6 @@ public class DepthOrHeight {
         root.right.left = new Node(60);
         root.right.right = new Node(90);
 
-        System.out.println(new Depth().depth(root));
+        new KthInBSt().createArray(root);
     }
-
 }
