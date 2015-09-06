@@ -5,32 +5,31 @@
 
 package Tree_JAVA;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Queue;
-
 /**
  *
  * @author RAHUL
  */
 
-class KthInBSt
+class PrintNodeInRange
 {
-    ArrayList<Integer> arr = new ArrayList<Integer>();
-
-    void createArray(Node r,int k)
+    void printNodes(Node n, int s, int e)
     {
-        if(r == null)
+        if(n == null)
             return;
-        createArray(r.left, k);
-        arr.add(r.data);
-        if(arr.size() == k)
-            System.out.println(r.data);
-        createArray(r.right, k);
+
+        if(n.data > s)
+            printNodes(n.left, s, e);
+
+        if(s < n.data && e > n.data)
+            System.out.println(n.data);
+
+        if(n.data < e )
+            printNodes(n.right, s, e);
+
     }
 }
 
-public class KthSmallestElementInBST
+public class BSTinGivenRange
 {
     public static void main(String [] args)
     {
@@ -42,6 +41,6 @@ public class KthSmallestElementInBST
         root.right.left = new Node(60);
         root.right.right = new Node(90);
 
-        new KthInBSt().createArray(root, 3);
+        new PrintNodeInRange().printNodes(root, 20, 70);
     }
 }

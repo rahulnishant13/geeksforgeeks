@@ -16,15 +16,11 @@ class CheckSum
     {
         int ld =0, rd =0;
         boolean lc,rc;
-        if(r == null)
+        if( (r == null) || r.left == null && r.right == null)
             return true;
         
         lc = checkChildSum(r.left);
         rc = checkChildSum(r.right);
-        if(r.left == null && r.right == null)
-        {
-            return true;
-        }
         
         if(r.left != null)
         {

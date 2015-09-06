@@ -10,26 +10,31 @@ package Tree_JAVA;
  * @author RAHUL
  */
 
-class LeafSum
+class GetAncestors
 {
-    boolean leafSum(Node r, int sum)
+    boolean printAncestors(Node n, int rslt)
     {
-        if(r == null)
+        if(n == null)
             return false;
 
-        boolean rslt = false;
-        sum = sum - r.data;
-        if(sum == 0 && r.left == null && r.right == null)
+        if(n.data == rslt)
             return true;
-        
-        rslt = rslt || leafSum(r.left, sum);
-        rslt = rslt || leafSum(r.right, sum);
+        boolean l=false,r=false;
+        l = printAncestors(n.left, rslt);
+        r = printAncestors(n.right, rslt);
 
-        return rslt;
+        if(l || r)
+        {
+            System.out.print(n.data+" ");
+            return true;
+        }
+        else
+            return false;
     }
 }
 
-public class RootToLeafSum {
+public class AncestorsOfNode
+{
     public static void main(String [] args)
     {
         Node root = new Node(50);
@@ -40,9 +45,6 @@ public class RootToLeafSum {
         root.right.left = new Node(60);
         root.right.right = new Node(90);
 
-        if(new LeafSum().leafSum(root, 95))
-            System.out.println("Its there");
-        else
-            System.out.println("Sum is not there");
+        new GetAncestors().printAncestors(root, 40);
     }
 }
