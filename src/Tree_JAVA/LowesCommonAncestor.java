@@ -38,6 +38,6 @@ public class LowesCommonAncestor {
         root.right.left = new Node(60);
         root.right.right = new Node(90);
 
-        new LCA().lowestCommAncestor(root, 15, 40);
+        new LCA().lowestCommAncestor(root, 15, 60);
     }
 }

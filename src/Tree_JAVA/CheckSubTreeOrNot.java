@@ -38,7 +38,7 @@ class SubtreeOrNot
     }
 }
 
-public class CheckBinaryTreeIsSubtree
+public class CheckSubTreeOrNot
 {
     public static void main(String [] args)
     {

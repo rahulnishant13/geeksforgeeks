@@ -17,13 +17,9 @@ class BSTorNOT
         if (r == null)
             return true;
         if(r.data < min || r.data > max)
-        {
-            System.out.println("NOT BST");
             return false;
-        }
-        isBST(r.left, min, r.data - 1);
-        isBST(r.right, r.data + 1, max);
-        return true;
+        
+        return (isBST(r.left, min, r.data - 1) && isBST(r.right, r.data + 1, max));
     }
 }
 
@@ -40,5 +36,7 @@ public class CheckBST {
 
         if(new BSTorNOT().isBST(root, Integer.MIN_VALUE, Integer.MAX_VALUE))
             System.out.println("Is BST");
+        else
+            System.out.println("Not BST");
     }
 }
