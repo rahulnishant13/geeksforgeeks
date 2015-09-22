@@ -24,7 +24,7 @@ public class ArrayRotation {
     public static void main(String z[]){
 int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
 
-int w,windowsize=3,temp,i,j,k,n=12;
+int w,windowsize=2,temp,i,j,k,n=12;
 Hcf ob= new Hcf();
 w=ob.gcd(arr.length,windowsize);
 

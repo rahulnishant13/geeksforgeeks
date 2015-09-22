@@ -25,8 +25,8 @@ class EquilibriumI
             sum -= arr[i];
 
             if(left == sum)
-                System.out.println(" "+i);
-            else
+                System.out.println(arr[i]+" : Index : "+i);
+
                 left += arr[i];
         }
     }
