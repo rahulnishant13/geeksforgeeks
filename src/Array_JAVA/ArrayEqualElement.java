@@ -12,11 +12,6 @@ import java.util.Arrays;
 public class ArrayEqualElement
 {
     public static void main(String args[]) {
-       int arr[] = {10, 20, 30, 40, 50};
-       for(int i=0; i < arr.length; i++)
-       {
-             System.out.println(" " + arr[i]);
-       }
 
        // comparing two ArrayEqualElement
 
@@ -34,6 +29,6 @@ public class ArrayEqualElement
 	arr4 = arr3;
 //	arr3 = arr4; // arr3 is final
 	for (int i = 0; i < arr4.length; i++)
-		System.out.println(arr4[i]);
+		System.out.print(" "+arr4[i]);
     }
 }
