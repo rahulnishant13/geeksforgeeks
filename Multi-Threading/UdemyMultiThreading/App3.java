@@ -15,7 +15,7 @@ public class App3 {
 public static void main(String[] args){
     Thread t1 = new Thread(new Runnable() {
 
-        public void run()
+       public void run()
         {
             for(int i=0; i<20;i++)
         {
@@ -29,8 +29,8 @@ public static void main(String[] args){
             }
         }
         }
-    });
-
+        });
+        
     t1.start();
 
 }

@@ -7,12 +7,10 @@ package SynchronizationAndThreading;
 
 
 import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 class MyThread extends Thread
 {
-    private boolean  running = true;
+    private volatile boolean  running = true;
     
     @Override
     public void run()
@@ -40,11 +38,6 @@ public class SyncBasicThread {
        
         Scanner input = new Scanner(System.in);
         input.nextLine();
-        try {
-            t1.join();
-        } catch (InterruptedException ex) {
-            Logger.getLogger(SyncBasicThread.class.getName()).log(Level.SEVERE, null, ex);
-        }
         t1.shutDown();
     }
 
