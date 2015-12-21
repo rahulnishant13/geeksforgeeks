@@ -1,0 +1,13 @@
+{
+  "site": {
+    "id": "434c45fb6bdb4ca4bf29de653877f31e"
+  },
+  "device": {
+    "ida": "63437951-0E19-4F58-90D1-68BDB2781348",
+    "idv": "6EF80ABB-C731-4322-B8DE-44B72ED9F3B6",
+    "adt": 1,
+    "ip": "1.7.255.255",
+    "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 8_3 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Mobile/12F70"
+  },
+  "responseformat": "json"
+}
