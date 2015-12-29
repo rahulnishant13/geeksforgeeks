@@ -1,0 +1,16 @@
+CREATE DATABASE IF NOT EXIST AppoloPharmacy;
+
+USE AppoloPharmacy;
+
+/*Tabes to be created*/
+
+CRAETE table DoctorDetails (NameOfDoctor nvarchar(20),
+DocId bigint(4),Address nvarchar(60),
+PhoneNo bigint(12),Department nvarchar(10),
+Constraint UniID UNIQUE(DocID));
+
+create index docidindex on DoctorDetails(DocID);
+
+CREATE TABLE DocToIDMapping (DocName nvarchar(20),DocID bigint(4),constraint uniid UNIQUE(DocID));
+
+
