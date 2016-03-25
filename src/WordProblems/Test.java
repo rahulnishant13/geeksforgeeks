@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 
-package careermonk;
+package WordProblems;
 /**
  *
  * @author RAHUL

@@ -1,10 +1,10 @@
-CREATE DATABASE IF NOT EXIST AppoloPharmacy;
+CREATE DATABASE IF NOT EXISTS AppoloPharmacy;
 
 USE AppoloPharmacy;
 
 /*Tabes to be created*/
 
-CRAETE table DoctorDetails (NameOfDoctor nvarchar(20),
+CRAETE table IF NOT EXISTS DoctorDetails (NameOfDoctor nvarchar(20),
 DocId bigint(4),Address nvarchar(60),
 PhoneNo bigint(12),Department nvarchar(10),
 Constraint UniID UNIQUE(DocID));
