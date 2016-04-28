@@ -13,34 +13,43 @@ package Array_JAVA;
 class Kthnumber
 {
     int [] arr;
-    void quicksort(int pivot)
+    void quicksort(int x)
     {
-        int i,j,temp,low=0,h=arr.length-1;
-        i = low;
-        for(j=low+1;j <= h;j++)
-        {
-            if(arr[j] < pivot)
-            {
-                i++;
-                temp = arr[j];
-                arr[j] = arr[i];
-                arr[i] = temp;
-            }
-        }
-            temp = arr[i];
-            arr[i] = pivot;
-            arr[low] = temp;
+        int pivot,j,temp,i, first = 0, last = arr.length - 1;
+
+     if(first<last){
+         pivot=x;
+         i=first;
+         j=last;
+
+         while(i<j){
+             while(arr[i]<=arr[pivot]&&i<last)
+                 i++;
+             while(arr[j]>arr[pivot])
+                 j--;
+             if(i<j){
+                 temp=arr[i];
+                  arr[i]=arr[j];
+                  arr[j]=temp;
+             }
+         }
+
+         temp=arr[pivot];
+         arr[pivot]=arr[j];
+         arr[j]=temp;
         System.out.println("Kth number : "+arr[pivot]);
+    }
     }
 }
 
-public class KthLargestElement
-{
-    public static void main(String [] args)
+public class HelloWorld{
+
+     public static void main(String [] args)
     {
         Kthnumber obj = new Kthnumber();
         obj.arr = new int[]{1, 23, 12, 9, 30, 2, 50};
-        int x = 5;
-        obj.quicksort(x);
+        int x = 4;
+        obj.quicksort(x-1);
     }
 }
+
