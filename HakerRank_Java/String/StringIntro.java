@@ -17,7 +17,6 @@ For the second line, write Yes if AA is lexicographically larger than BB or No i
 For the third line, capitalize the first letter in both AA and BB and print them on a single line, separated by a space.
 */
 
-import java.io.*;
 import java.util.*;
 
 public class StringIntro {

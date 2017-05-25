@@ -17,8 +17,8 @@ Some invalid IP address:
 23.45.22.32.
 I.Am.not.an.ip
 */
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+
+
 import java.util.Scanner;
 
 class Regex {
@@ -31,6 +31,7 @@ class Regex {
             String IP = in.next();
             System.out.println(IP.matches(new MyRegex().pattern));
         }
+        in.close();
 
     }
 }

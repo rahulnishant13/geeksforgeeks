@@ -6,7 +6,6 @@ Given a string AA, print "Yes" if it is a palindrome, print "No" otherwise. The 
 Some examples of palindromes are "madam", "anna", "reviver".
 */
 
-import java.io.*;
 import java.util.*;
 
 public class Reverse {

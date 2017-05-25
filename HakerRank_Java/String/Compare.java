@@ -12,7 +12,6 @@ Output Format
 In the first line print the lexicographically minimum substring. In the second line print the lexicographically maximum substring.
 */
 
-import java.io.*;
 import java.util.*;
 
 public class Compare {
@@ -26,6 +25,7 @@ public class Compare {
         	String a = A.substring(i, i+B);
         	ar.add(a);         	        	
         }
+        sc.close();
         ar.sort(null);
         System.out.println(ar.get(0));
         System.out.println(ar.get(ar.size()-1));
