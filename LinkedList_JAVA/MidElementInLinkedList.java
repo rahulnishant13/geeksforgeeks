@@ -30,9 +30,10 @@ public class MidElementInLinkedList
 		//insert your linked list
 		// and pass the head to below method
 		
-		Node midNode = getLoopInLinkedList(head);
+		if(head != null){
+			Node midNode = getLoopInLinkedList(head);
 		
-		System.out.println(midNode.data);
-		
+			System.out.println(midNode.data);
+		}
 	}
 }
