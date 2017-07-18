@@ -11,7 +11,7 @@ package Array_JAVA;
  * @author RAHUL
  */
  
- public class GetFirst1InSortedArrayOf0nd1{
+ public class GetLast0InSortedArrayOf0nd1{
     
     static int binaraySearchIndex(int [] arr, int low, int high){
         if(low > high)
