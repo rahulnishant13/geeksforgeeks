@@ -49,8 +49,9 @@ public class DetectingLoopInLinkedlist
 	public static void main (String[] args) throws java.lang.Exception
 	{
 		//insert your linked list
+		// and pass the head to below method
 		
-		Node startLoop = getLoopInLinkedList();
+		Node startLoop = getLoopInLinkedList(head);
 		
 		if(startLoop != null){
 		    System.out.println(startLoop.data);
