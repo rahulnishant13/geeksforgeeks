@@ -11,7 +11,8 @@ package Array_JAVA;
  * @author RAHUL
  */
  
- public class GetLast0InSortedArrayOf0nd1{
+ public class GetLast0InSortedArrayOf0nd1
+ {
     
     static int binaraySearchIndex(int [] arr, int low, int high){
         if(low > high)
@@ -19,18 +20,23 @@ package Array_JAVA;
         
         int mid = low + (high - low)/2;
         
-        if((arr[mid] == 0) && (mid == 0 || arr[mid + 1] == 1))
+        if((arr[mid] == 0) && (mid == arr.length -1 || arr[mid + 1] == 1))
             return mid;
         
-        else if(arr[mid] == 1 && arr[mid - 1] != 0)
+        else if(arr[mid] == 1 && (mid == 0 || arr[mid - 1] != 0))
                 return binaraySearchIndex(arr, low, mid - 1);
         else
                 return binaraySearchIndex(arr, mid + 1, high);
     }
 
      public static void main(String []args){
-        int [] arr = new int[]{0,0,0,0,0,0,1,1,1,1};
+        int [] arr = new int[]{0,0,0,0,0,1,1,1,1};
         
-        System.out.println(binaraySearchIndex(arr, 0, arr.length - 1) + 1); // index starts from 0 so +1
+        int result = binaraySearchIndex(arr, 0, arr.length - 1);
+        
+        if(result == -1)
+            System.out.println(result);
+        else
+            System.out.println( result + 1); // index starts from 0 so +1
      }
 }
