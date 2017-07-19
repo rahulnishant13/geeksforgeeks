@@ -10,41 +10,33 @@ package LinkedList_JAVA;
  * @author RAHUL
  */
 
-class Node
-{
+class Node{
     protected int data;
     protected Node link;
 
-    /*  Constructor  */
-    public Node()
-    {
+    public Node(){
         link = null;
         data = 0;
     }
-    /*  Constructor  */
-    public Node(int d,Node n)
-    {
-        data = d;
-        link = n;
+
+    public Node(int data, Node n){
+        this.data = data;
+        this.link = n;
     }
-    /*  Function to set link to next Node  */
-    public void setLink(Node n)
-    {
-        link = n;
+
+    public void setData(int data){
+        this.data = data;
     }
-    /*  Function to set data to current Node  */
-    public void setData(int d)
-    {
-        data = d;
+
+    public void setLink(Node link){
+        this.link = link;
     }
-    /*  Function to get link to next node  */
-    public Node getLink()
-    {
-        return link;
+
+    public int getData(){
+        return this.data;
     }
-    /*  Function to get data from current Node  */
-    public int getData()
-    {
-        return data;
+
+    public Node getLink(){
+        return this.link;
     }
 }
